@@ -1,7 +1,7 @@
-%define		_tpl		minimalmobile
+%define		_tpl	minimalmobile
 Summary:	Minimal Mobile template for DokuWiki
 Name:		dokuwiki-tpl-%{_tpl}
-Version:	0
+Version:	20070712
 Release:	0.1
 License:	GPL
 Group:		Applications/WWW
@@ -9,7 +9,7 @@ Source0:	http://www.commitment.es/minimalmobile/minimalmobile.zip
 # Source0-md5:	4be0786c41b63d9988e51aa51d659670
 URL:		http://wiki.splitbrain.org/wiki:tpl:minimal_mobile
 BuildRequires:	rpmbuild(macros) >= 1.268
-Requires:	dokuwiki >= 20061106
+Requires:	dokuwiki
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
