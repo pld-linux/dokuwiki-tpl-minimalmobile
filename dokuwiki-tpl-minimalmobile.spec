@@ -1,5 +1,6 @@
 %define		_tpl	minimalmobile
 Summary:	Minimal Mobile template for DokuWiki
+Summary(pl.UTF-8):	Szablon Minimal Mobile dla DokuWiki
 Name:		dokuwiki-tpl-%{_tpl}
 Version:	20070712
 Release:	0.1
@@ -17,15 +18,28 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define		_tpldir		%{_dokudir}/lib/tpl/%{_tpl}
 
 %description
-A very minimal template, with almost no margins, modified from the default
-template. The image displays a "narrow browser", equivalent to what a user can
-see in a mobile (albeit with lots of scrolling).
+A very minimal template, with almost no margins, modified from the
+default template. The image displays a "narrow browser", equivalent
+to what a user can see in a mobile (albeit with lots of scrolling).
 
 Features:
 - Moved top bar and breadcrumbs to bottom
 - Made most things small, and removed most padding and extra stuff
 - Still fully functional
 - Not pretty on big screen, but usable.
+
+%description -l pl.UTF-8
+Naprawdę minimalistyczny szablon, prawie bez marginesów, przerobiony
+z szablonu domyślnego. Wyświetla "wąską przeglądarkę", odpowiadającą
+temu, co użytkownik może zobaczyć w telefonie (tyle że z dużą ilością
+przewijania).
+
+Cechy szablonu:
+- ma górny pasek i przyciski nawigacyjne przeniesione na dół
+- jest wykonany ze zmniejszoną większością elementów i usuniętą
+  większością odstępów oraz elementów dodatkowych
+- jest nadal w pełni funkcjonalny
+- nie wygląda najpiękniej na dużym ekranie, ale jest używalny.
 
 %prep
 %setup -qc
