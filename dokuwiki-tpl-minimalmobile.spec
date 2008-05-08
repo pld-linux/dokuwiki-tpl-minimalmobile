@@ -1,7 +1,7 @@
-%define		_tpl	minimalmobile
+%define		tpl	minimalmobile
 Summary:	Minimal Mobile template for DokuWiki
 Summary(pl.UTF-8):	Szablon Minimal Mobile dla DokuWiki
-Name:		dokuwiki-tpl-%{_tpl}
+Name:		dokuwiki-tpl-%{tpl}
 Version:	20070712
 Release:	1
 License:	GPL
@@ -14,8 +14,8 @@ Requires:	dokuwiki
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_dokudir	/usr/share/dokuwiki
-%define		_tpldir		%{_dokudir}/lib/tpl/%{_tpl}
+%define		dokudir		/usr/share/dokuwiki
+%define		tpldir		%{dokudir}/lib/tpl/%{tpl}
 
 %description
 A very minimal template, with almost no margins, modified from the
@@ -45,8 +45,8 @@ Cechy szablonu:
 %setup -qc
 
 cat > INSTALL <<'EOF'
-To activate this template add the following to your conf/local.php file: 
-$conf['template']    = '%{_tpl}';
+To activate this template add the following to your conf/local.php file:
+$conf['template']    = '%{tpl}';
 
 Get rid of the TOC, that takes a lot of space in mobile screens.
 $conf['toptoclevel'] = 0;  // Level starting with and below to include in AutoTOC (max. 5)
@@ -55,8 +55,8 @@ EOF
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_tpldir}
-cp -a minimalmobile/* $RPM_BUILD_ROOT%{_tpldir}
+install -d $RPM_BUILD_ROOT%{tpldir}
+cp -a minimalmobile/* $RPM_BUILD_ROOT%{tpldir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -64,4 +64,4 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc INSTALL
-%{_tpldir}
+%{tpldir}
