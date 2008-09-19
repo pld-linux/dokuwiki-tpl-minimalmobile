@@ -8,7 +8,7 @@ License:	GPL
 Group:		Applications/WWW
 Source0:	http://www.commitment.es/minimalmobile/minimalmobile.zip
 # Source0-md5:	4be0786c41b63d9988e51aa51d659670
-URL:		http://wiki.splitbrain.org/wiki:tpl:minimal_mobile
+URL:		http://www.dokuwiki.org/template:minimal_mobile
 BuildRequires:	rpmbuild(macros) >= 1.268
 Requires:	dokuwiki
 BuildArch:	noarch
