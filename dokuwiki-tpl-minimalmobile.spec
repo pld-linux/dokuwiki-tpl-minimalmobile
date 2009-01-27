@@ -14,6 +14,7 @@ Requires:	dokuwiki
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
+%define		dokuconf	/etc/webapps/dokuwiki
 %define		dokudir		/usr/share/dokuwiki
 %define		tpldir		%{dokudir}/lib/tpl/%{tpl}
 
@@ -60,6 +61,12 @@ cp -a minimalmobile/* $RPM_BUILD_ROOT%{tpldir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
+
+%post
+# force css cache refresh
+if [ -f %{dokuconf}/local.php ]; then
+	touch %{dokuconf}/local.php
+fi
 
 %files
 %defattr(644,root,root,755)
