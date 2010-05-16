@@ -10,6 +10,7 @@ Source0:	http://www.commitment.es/minimalmobile/minimalmobile.zip
 # Source0-md5:	4be0786c41b63d9988e51aa51d659670
 URL:		http://www.dokuwiki.org/template:minimal_mobile
 BuildRequires:	rpmbuild(macros) >= 1.268
+BuildRequires:	unzip
 Requires:	dokuwiki
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
