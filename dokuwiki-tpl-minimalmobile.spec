@@ -3,7 +3,7 @@ Summary:	Minimal Mobile template for DokuWiki
 Summary(pl.UTF-8):	Szablon Minimal Mobile dla DokuWiki
 Name:		dokuwiki-tpl-%{tpl}
 Version:	20070712
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/WWW
 Source0:	http://www.commitment.es/minimalmobile/minimalmobile.zip
